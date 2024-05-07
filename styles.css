@@ -1,0 +1,36 @@
+/*global css*/
+:root{
+    /*primary*/
+    --dark-cyan:hsl(158, 36%, 37%);
+    --cream:hsl(30, 38%, 92%);
+    /*neutral*/
+    --very-dark-blue:hsl(212, 21%, 14%);
+    --dark-geryish-blue:hsl(228, 12%, 48%);
+    --white:hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: calc(15px + 0.390625vw);
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Montserrat', arial, sans-serif;
+    color: var(--very-dark-blue);
+    overflow: hidden;
+    margin: 0;
+    background-color: var(--cream);
+}
+
+main{
+    height:95vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media only screen and (min-width:768px){
+
+}
