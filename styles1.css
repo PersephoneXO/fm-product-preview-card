@@ -1,0 +1,143 @@
+/*global css*/
+html,body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', arial, sans-serif;
+    color: hsl(212, 21%, 14%);
+    overflow: hidden;
+    background-color: hsl(30, 38%, 92%);
+}
+
+main{
+    /*
+    height: 95%;
+    width: 100%;
+    background-color: hsl(30, 38%, 92%);*/
+    height: 97%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container{
+    height: 90%;
+    width: 90%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: "itemPic" "textContent";
+    grid-template-rows: 40% 60%;
+}
+
+.item-pic{
+    grid-area: itemPic;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: url(./product-preview-card-component-main/images/image-product-mobile.jpg) no-repeat;
+    background-size: cover;
+}
+
+.text-content{
+    grid-area: textContent;
+    padding-inline: 6.5%;
+    padding-top: 6.5%;
+    padding-bottom: 6.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.item-name{
+    color: hsl(212, 21%, 14%);
+    font-family: 'Fraunces';
+    font-weight: 700;
+    margin: 0;
+    line-height: 30px;
+}
+
+
+.item-type,
+.item-desc,
+.item-price{
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    /*font-size: 14px;*/
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+.prices-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-sale-price{
+    margin: 0;
+    font-family: 'Fraunces';
+    color: hsl(158, 36%, 37%);
+}
+
+.item-price{
+    text-decoration: line-through;
+}
+
+.atc-button{
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+}
+
+.atc-button:hover{
+    background-color: #1c4a39;
+    cursor: pointer;
+}
+
+.atc-text{
+    font-weight: 500;
+    font-size: 0.88rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.attribution{
+    margin: 0;
+
+}
+
+/*design for desktop*/
+@media only screen and (min-width:768px){
+    .card-container{
+        height: 50%;
+        width: 40%;
+        display: grid;
+        grid-template-areas: "itemPic textContent";
+        grid-template-columns: 50%;
+        grid-template-rows: 100%;
+    }
+
+    .item-pic{
+        background-image: url(./product-preview-card-component-main/images/image-product-desktop.jpg);
+        background-position: center;
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .text-content{
+        padding-inline: 10%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+
+}
