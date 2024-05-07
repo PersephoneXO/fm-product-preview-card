@@ -29,6 +29,75 @@ main{
     flex-direction: column;
 }
 
+.card-container{
+    height: 100%;
+    display:grid;
+    /*grid-template-rows: 45% 15% 20% 10% 10%;*/
+    grid-template-rows: 40% 60%;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin: calc(15px + 1.5625vw);
+}
+
+.item-pic{
+    background: url(./product-preview-card-component-main/images/image-product-mobile.jpg) no-repeat;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.text-content{
+    display: grid;
+    grid-template-rows: 40% 30% 15% 15%;
+    padding-inline: calc(15px + 1.5625vw);
+    padding-top: calc(15px + 1.5625vw);
+    padding-bottom: calc(15px + 1.5625vw);
+}
+
+.text-content *{
+    margin: 0;
+}
+
+.intro-div{
+    display: flex;
+    flex-direction: column;
+    gap: calc(5px + 1.5625vw);
+}
+
+.item-name{
+    font-family: 'Fraunces';
+    font-size:2rem;
+}
+
+.item-type,
+.item-desc,
+.item-price{
+    color: var(--dark-geryish-blue);
+    font-weight: 500;
+    font-size: .85rem;
+}
+
+
+.prices-container{
+    display: flex;
+    align-items: center;
+    gap: calc(10px + 1.5625vw);
+}
+
+.item-sale-price{
+    font-size: 2rem;
+    color: var(--dark-cyan);
+    font-family: 'Fraunces';
+}
+
+.item-price{
+    text-decoration: line-through;
+}
+
+.atc-button{
+    display: flex;
+    background-color: var(--dark-cyan);
+}
 
 
 @media only screen and (min-width:768px){
