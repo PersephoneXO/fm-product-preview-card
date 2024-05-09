@@ -32,7 +32,7 @@ main{
 .card-container{
     height: 100%;
     display:grid;
-    grid-template-rows: min-content;
+    /*grid-template-rows: min-content;*/
     /*grid-template-rows: 45% 15% 20% 10% 10%;*/
     grid-template-rows: 40% 60%;
     background-color: var(--white);
@@ -68,7 +68,7 @@ main{
 .item-name{
     font-family: 'Fraunces';
     font-size:2rem;
-    line-height: 35px;
+    line-height: 1.75rem;
 }
 
 .item-type,
@@ -77,6 +77,10 @@ main{
     color: var(--dark-geryish-blue);
     font-weight: 500;
     font-size: .85rem;
+}
+
+.item-desc{
+    line-height: 1.2rem;
 }
 
 
@@ -110,7 +114,58 @@ main{
     font-size: .95rem;
 }
 
+.atc-button:hover{
+    background-color:#1c4a39;
+    cursor: pointer;
+}
 
+/*desktop design*/
 @media only screen and (min-width:768px) and (orientation:landscape){
 
+    main{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-container{
+        height: 60%;
+        width: 50%;
+        grid-template-rows: auto;
+        grid-template-columns: 50% 50%;
+    }
+
+    .item-pic{
+        background-image: url(./product-preview-card-component-main/images/image-product-desktop.jpg);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        background-position: center;
+    }
+
+    .text-content{
+        grid-template-rows: auto min-content auto auto;
+    }
+
+    .intro-div{
+        gap: calc(0px + 1.5625vw);
+    }
+
+    .item-name,
+    .item-sale-price{
+        font-size: 1.75rem;
+    }
+
+
+    .item-type,
+    .item-desc,
+    .item-price{
+        font-size: .75rem;
+    }
+
+    .atc-button{
+        gap: calc(-10px + 1.5625vw);
+    }
+
+    .atc-text{
+        font-size: .75rem;
+    }
 }
